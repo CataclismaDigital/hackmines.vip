@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mines Hacker</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    #avisodep {
+      width: 270px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    #botao-depoimentos {
+    display: block;
+    margin: auto;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2d2e37;
+    background-color: #15e55d;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  /* Estilizando o botão da dropbar */
+.dropbtn {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-weight: 500;
+}
+
+
+/* Estilizando o conteúdo da dropbar (as opções) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 160px; /* Defina a largura conforme necessário */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 50%; /* Move a caixa para a metade do contêiner pai */
+  transform: translateX(-50%); /* Move a caixa de volta em 50% da sua própria largura */
+}
+
+/* Estilizando os links dentro da dropbar */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mudando a cor do link quando o mouse passa sobre ele */
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+/* Mostrando o conteúdo da dropbar quando o mouse passa sobre o botão */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilizando a dropbar quando ela está expandida */
+.dropdown:hover .dropbtn {
+  background-color: #000000;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 300px; /* Ajuste o tamanho máximo do contêiner conforme necessário */
+  margin: auto;
+  margin-top: 20px;
+}
+
+.carousel-slide {
+  display: flex;
+  overflow: hidden; /* Certifique-se de que o overflow esteja oculto para garantir que as imagens redimensionadas não transbordem */
+  border-radius: 20px;
+}
+
+.carousel-slide img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+  </style>
+
+</head>
+<body>
+
+
+<h2 style="text-align: center; margin-top: 30px;">TUTORIAL <b style="color: orange">COMPLETO</b></h2>
+
+
+  <!-- <img style="display: block; margin-left: auto; margin-right: auto; width: 350px; margin-top: 20px;" src="images/headline.jpg" alt=""> -->
+  <div  style="margin-top: 20px; margin-bottom: 50px; display: flex; justify-content: center;" class="container"> 
+    <video style="border-radius: 30px; box-shadow: 0 10px 80px black;" width="300" height="300" controls poster="images/thumb.jpg">
+      <source src="tutorial/tutorial.mp4" type="video/mp4">
+    </video>      
+  </div>
+  <a href="https://t.me/+znkPCpGR41tlMGZh" target=”_blank”><button id="botao-depoimentos" style="margin-bottom: 100px;">GRUPO VIP GRATUITO 🤑</button></a>
+
+
+    <!-- Play Movie Container starts -->
+    <div class="play-container container">
+      <img src="images/logo.png" style="display: block; margin-left: auto; margin-right: auto; width: 200px;">
+        <h3 style="text-align: center;">💥 Tentativas: até 2</h3>
+        <div  class="dropdown">
+          <button id="dropbtn" class="dropbtn" onclick="toggleDropdown()">Selecionar ESTRATÉGIA ></button>
+          <div id="drop-cont" class="dropdown-content">
+            <a href="#" onclick="changeOption('ESTRATÉGIA: 3 Minas (4 Estrelas)'); changeVar(4);">3 Minas (4 Estrelas)</a>
+            <a href="#" onclick="changeOption('ESTRATÉGIA: 2 Minas (6 estrelas)'); changeVar(6);" >2 Minas (6 estrelas)</a>
+            <a href="#" onclick="changeOption('ESTRATÉGIA: 1 Mina (10 estrelas)'); changeVar(10);">1 Mina (10 estrelas)</a>
+            <a href="#" onclick="changeOption('ESTRATÉGIA: Revelar BOMBAS'); changeVar(22); changeImg(0);">Revelar BOMBAS</a>
+          </div>
+        </div>
+        <br>
+        <img id="avisodep" src="images/aviso.jpg">
+        <div id="quadrados">
+            <div id="fileira-1"></div>
+            <div id="fileira-2"></div>
+            <div id="fileira-3"></div>
+            <div id="fileira-4"></div>
+            <div id="fileira-5"></div>
+        
+          </div><br>
+        <div class="container">
+          <button id="botao-sinal" onclick="gerarSinal()">HACKEAR SINAL</button>
+        
+        <br>
+         </div>
+         
+        
+        <div class="container">
+        <a href="https://brazzabet.com/" target=”_blank”><button id="botao-iframe">ABRIR EM NOVA PÁGINA ></button></a>
+        <br><br>
+         </div>
+
+         <iframe id="meu-iframe" src="https://brazzabet.com/" allow="clipboard-write *"></iframe>
+         <br>
+
+         <h2 style="text-align: center; margin-top: 30px;">PROVAS DE <b style="color: orange">SAQUE:</b></h2>
+         <div class="carousel-container">
+          <div class="carousel-slide">
+            <img src="images/provas/prova1.jpg">
+            <img src="images/provas/prova2.jpg">
+            <img src="images/provas/prova3.jpg">
+            <img src="images/provas/prova4.jpg">
+            <img src="images/provas/prova5.jpg">
+            <img src="images/provas/prova6.jpg">
+            <img src="images/provas/prova7.jpg">
+            <img src="images/provas/prova8.jpg">
+            <img src="images/provas/prova9.jpg">
+            <img src="images/provas/prova10.jpg">
+            <img src="images/provas/prova11.jpg">
+            <img src="images/provas/prova12.jpg">
+            <img src="images/provas/prova13.jpg">
+            <img src="images/provas/prova14.jpg">
+            <img src="images/provas/prova15.jpg">
+            <!-- Adicione mais imagens conforme necessário -->
+          </div>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        
+        
+        
+         <script src="js/app.js"></script>
+         
+ 
+        
+        <br><br>
+         </div>
+        
+        
+    <!-- Play Movie Container ends -->
+  
+
+
+     <!-- GERAR SINAL! -->
+
+    <!-- Copyright starts -->
+    <div class="copyright">
+        <p>&#169; Todos os Direitos Reservados!</p>
+    </div>
+    <!-- Copyright ends -->
+
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../../js/main.js"></script>
+    
+</body>
+</html>
